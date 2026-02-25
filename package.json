@@ -1,0 +1,123 @@
+{
+  "name": "fahhherror",
+  "publisher": "LestlinRobins",
+  "displayName": "fahhhk",
+  "description": "Plays a sound when errors occur in the terminal",
+  "version": "0.0.6",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fahhherror.playSound",
+        "title": "fahhhError: Play Test Sound"
+      },
+      {
+        "command": "fahhherror.runCommandWithSound",
+        "title": "fahhhError: Run Command With Sound"
+      },
+      {
+        "command": "fahhherror.runDefaultCommandWithSound",
+        "title": "fahhhError: Run Default Command With Sound"
+      },
+      {
+        "command": "fahhherror.setDefaultCommand",
+        "title": "fahhhError: Set Default Command"
+      },
+      {
+        "command": "fahhherror.resetDefaultCommand",
+        "title": "fahhhError: Reset to Auto-Detect"
+      },
+      {
+        "command": "fahhherror.toggleMute",
+        "title": "faahhhk: Toggle Mute Sounds"
+      },
+      {
+        "command": "fahhherror.openMenu",
+        "title": "faahhhk: Open Settings Menu"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Error Sound Alert",
+        "properties": {
+          "errorSoundAlert.enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable or disable the error sound alert"
+          },
+          "errorSoundAlert.soundFile": {
+            "type": "string",
+            "default": "bundled:fahhhh.wav",
+            "description": "Path to the sound file to play (mp3/wav/m4a), 'bundled:fahhhh.wav' for the included sound, or custom path"
+          },
+          "errorSoundAlert.volume": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Volume level for the sound (0-1)"
+          },
+          "errorSoundAlert.playOnDiagnostics": {
+            "type": "boolean",
+            "default": true,
+            "description": "Play sound when diagnostic errors are detected"
+          },
+          "errorSoundAlert.playOnTerminalError": {
+            "type": "boolean",
+            "default": true,
+            "description": "Play sound when terminal detects exit code indicating error"
+          },
+          "errorSoundAlert.defaultCommand": {
+            "type": "string",
+            "default": "",
+            "description": "Default shell command to run for terminal error detection"
+          },
+          "errorSoundAlert.autoRunCommand": {
+            "type": "boolean",
+            "default": true,
+            "description": "Run the default command automatically when VS Code starts"
+          },
+          "errorSoundAlert.preferActiveFileDetection": {
+            "type": "boolean",
+            "default": true,
+            "description": "Prefer auto-detection based on the active file even when a default command is set"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.2"
+  },
+  "files": [
+    "out",
+    "media"
+  ]
+}
