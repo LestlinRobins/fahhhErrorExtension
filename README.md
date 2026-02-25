@@ -4,11 +4,11 @@ Automatically plays the legendary “fahhh” whenever your terminal throws an e
 
 ## Features
 
-- 🔊 Plays audio alerts when code errors are detected via diagnostics
-- 🎵 Support for custom MP3/WAV files or built-in system sounds
-- ⚙️ Highly configurable with various options
-- 🔇 Easy enable/disable toggle
-- 🎚️ Volume control
+- Plays audio alerts when code errors are detected via diagnostics
+- Support for custom MP3/WAV files or built-in system sounds
+- Highly configurable with various options
+- Easy enable/disable toggle
+- Volume control
 
 ## Installation
 
