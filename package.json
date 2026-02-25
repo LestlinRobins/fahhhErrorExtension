@@ -2,13 +2,20 @@
   "name": "fahhherror",
   "publisher": "LestlinRobins",
   "displayName": "fahhhk",
-  "description": "Plays a sound when errors occur in the terminal",
-  "version": "0.0.6",
+  "description": "Automatically plays the legendary “fahhh” whenever your terminal throws an error, so every failed build comes with the emotional damage it truly deserves.",
+  "version": "0.0.7",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LestlinRobins/fahhhErrorExtension"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Testing",
+    "Themes"
   ],
   "activationEvents": [
     "onStartupFinished"

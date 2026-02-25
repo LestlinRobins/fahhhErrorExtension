@@ -1,6 +1,6 @@
 # Error Sound Alert
 
-A VSCode extension that plays an audio alert whenever errors are detected in your code or terminal.
+Automatically plays the legendary “fahhh” whenever your terminal throws an error, so every failed build comes with the emotional damage it truly deserves.
 
 ## Features
 
