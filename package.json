@@ -3,7 +3,7 @@
   "publisher": "LestlinRobins",
   "displayName": "fahhhk",
   "description": "Automatically plays the legendary “fahhh” whenever your terminal throws an error, so every failed build comes with the emotional damage it truly deserves.",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -48,10 +48,36 @@
         "title": "faahhhk: Toggle Mute Sounds"
       },
       {
+        "command": "fahhherror.setVolume",
+        "title": "faahhhk: Set Volume"
+      },
+      {
         "command": "fahhherror.openMenu",
         "title": "faahhhk: Open Settings Menu"
+      },
+      {
+        "command": "fahhherror.openPanel",
+        "title": "faahhhk: Open Settings Panel"
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "fahhherror-sidebar",
+          "title": "faahhhk",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "fahhherror-sidebar": [
+        {
+          "type": "webview",
+          "id": "fahhherror.settingsPanel",
+          "name": "Settings"
+        }
+      ]
+    },
     "configuration": [
       {
         "title": "Error Sound Alert",
@@ -93,6 +119,11 @@
             "default": true,
             "description": "Run the default command automatically when VS Code starts"
           },
+          "errorSoundAlert.playOnSuccess": {
+            "type": "boolean",
+            "default": false,
+            "description": "Play the success sound (success.wav) when a command exits with code 0"
+          },
           "errorSoundAlert.preferActiveFileDetection": {
             "type": "boolean",
             "default": true,
@@ -125,6 +156,7 @@
   },
   "files": [
     "out",
-    "media"
+    "media",
+    "sounds"
   ]
 }
