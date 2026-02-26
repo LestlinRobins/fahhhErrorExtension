@@ -2,6 +2,9 @@
 
 Automatically plays the legendary “fahhh” whenever your terminal throws an error, so every failed build comes with the emotional damage it truly deserves.
 
+NEW: Success and Emotional Damage sounds added as per user feedback
+NOTE: Success sound effect is purely organic and made by Muhammad Basil P V. Grateful to him for the idea too.
+
 ## Features
 
 - Plays audio alerts when code errors are detected via diagnostics
